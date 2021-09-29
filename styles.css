@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  }
+
+body, html {
+    /* height: 100%; */
+    font-family: "Assistant";
+}
+
+
+/* NAVIGATION */
+
+
+#navigation-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 97px;
+  width: 106px;
+  height: 40px;
+}
+
+
+.navigation-bar ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  background: #5C241B; 
+}
+
+a {
+  text-decoration: none;
+  color:#F5F4EE;
+  font-size: 16px;
+  padding: 5px 15px;
+  font-weight: 600;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Assistant";
+}
+
+/* HERO SECTION */
+
+/* The hero image */
+.hero-image {
+  background-image: url("hero-image.png");
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 1440px;
+  height: 877px;
+  left: 0px;
+  top: 30px;
+  z-index: -1;
+}
+
+/* Place text on the hero image */
+.hero-text {
+  text-align: left;
+  position: absolute;
+  color:#ECEAE0;
+}
+
+h1 {
+  position: absolute;
+  width: 980px;
+  height: 181px;
+  left: 92px;
+  top: 100px;
+  
+  font-family: "Arima Madurai";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 91px;
+  line-height: 115.3%;
+}
+
+h3 {
+  position: absolute;
+  width: 955px;
+  height: 79px;
+  left: 92px;
+  top: 350px;
+
+  font-family: "Assistant";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 37px;
+
+  color: #ECEAE0;
+}
+
+
+/* CTA Button */
+
+.cta {
+  position: absolute;
+  width: 220px;
+  height: 60px;
+  top: 125px;
+
+  background: #F5F4EE;
+  border-radius: 4.12437px;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+
+  color: #5C241B;
+}
+
+/* Our Story Section on Home Page */
+
+.our-story {
+  position: absolute;
+  width: 1440px;
+  height: 991px;
+  left: 0px;
+  top: 900px;
+
+  background: #F5F4EE;
+}
+
+h2 {
+  position: absolute;
+  width: 1225px;
+  height: 89px;
+  left: 109px;
+  top: 90px;
+
+  font-family: Arima Madurai;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 118px;
+  text-align: center;
+
+  color: #5C241B;
+}
+
+.our-story-details {
+  margin-left: 97px;
+}
+
+.our-story-map {
+  margin-top: 260px;
+}
+
+
+/* FOOTER */
+
+footer {
+  position: absolute;
+width: 1440px;
+height: 120px;
+left: 97px;
+margin-top: 1890px;
+
+}
