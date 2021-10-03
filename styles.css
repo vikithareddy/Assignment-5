@@ -6,81 +6,95 @@
 body, html {
     /* height: 100%; */
     font-family: "Assistant";
+    background: #F5F4EE;
+    color: #5C241B;
+    display: flex;
+    flex-direction: column;
 }
+
 
 
 /* NAVIGATION */
 
 
-#navigation-container {
-  position: relative;
+nav {
+  width: 100%;
+  background-color: #5C241B;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 5px;
 }
+
 
 .logo {
-  display: flex;
-  flex-direction: row;
-  margin-left: 97px;
-  width: 106px;
-  height: 40px;
+  display: inline-block;
 }
 
-
-.navigation-bar ul {
+.nav-links {
+  list-style: none;
   display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  background: #5C241B; 
-}
-
-a {
-  text-decoration: none;
-  color:#F5F4EE;
-  font-size: 16px;
-  padding: 5px 15px;
   font-weight: 600;
 }
 
-li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-family: "Assistant";
+.nav-item a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  height: auto;
 }
+
+.nav-item:hover {
+  background-color: white;
+  height: 1px;
+
+}
+
+
+.logo img {
+  width: 100px;
+  vertical-align: middle;
+  margin-left:90px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.cart img {
+  vertical-align: middle;
+  margin-right:90px;
+}
+
 
 /* HERO SECTION */
 
 /* The hero image */
 .hero-image {
-  background-image: url("hero-image.png");
+  background-image: url("images/hero-image.png");
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
+
   width: 1440px;
   height: 877px;
-  left: 0px;
-  top: 30px;
-  z-index: -1;
+
 }
 
 /* Place text on the hero image */
 .hero-text {
   text-align: left;
-  position: absolute;
   color:#ECEAE0;
 }
 
 h1 {
-  position: absolute;
+
   width: 980px;
   height: 181px;
-  left: 92px;
-  top: 100px;
+  margin-top: 92px;
+  margin-left: 90px;
   
   font-family: "Arima Madurai";
   font-style: normal;
@@ -89,12 +103,12 @@ h1 {
   line-height: 115.3%;
 }
 
-h3 {
-  position: absolute;
+h2 {
+
   width: 955px;
   height: 79px;
-  left: 92px;
-  top: 350px;
+  margin-left: 90px;
+  margin-top: 50px;
 
   font-family: "Assistant";
   font-style: normal;
@@ -109,10 +123,10 @@ h3 {
 /* CTA Button */
 
 .cta {
-  position: absolute;
   width: 220px;
   height: 60px;
   top: 125px;
+  margin-left: 90px;
 
   background: #F5F4EE;
   border-radius: 4.12437px;
@@ -122,55 +136,556 @@ h3 {
   font-size: 32px;
   line-height: 40px;
   text-align: center;
+  border: none;
 
   color: #5C241B;
 }
 
-/* Our Story Section on Home Page */
-
-.our-story {
-  position: absolute;
-  width: 1440px;
-  height: 991px;
-  left: 0px;
-  top: 900px;
-
-  background: #F5F4EE;
+.cta:hover {
+  background-color: rgba(245, 244, 238, 0.90);
+  color: #581A0F;
+  border: solid 2px #581A0F;
 }
 
-h2 {
-  position: absolute;
-  width: 1225px;
-  height: 89px;
-  left: 109px;
-  top: 90px;
 
-  font-family: Arima Madurai;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 72px;
-  line-height: 118px;
+/* OUR SHOP SECTION */
+
+#our-shop-title {
+  margin-top: 130px;
+}
+
+.our-shop {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  justify-content: center;
+}
+
+.map {
+  background-image: url("images/map.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 634px;
+  height: 480px;
+  z-index: 1;
+  margin-top: 70px;
+  margin-left: 90px;
+  float: left;
+}
+
+.map-bar {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  background-color: #5C241B;
+  width: 634px;
+  height: 100px;
+  margin-left: 90px;
+  color: white;
   text-align: center;
+  padding-top: 30px;
+  margin-bottom: 140px;
+}
 
+.location-icon {
+  margin-left: 60px;
+}
+
+.email-icon {
+  margin-left: 190px;
+}
+
+.map-bar p {
+  margin-left: -270px;
+}
+
+
+.our-shop-details {
+  background-color: #ECEAE0;
+  width: 619px;
+  height: 610px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 140px;
+  justify-content: center;
+}
+
+.our-shop-details h4 {
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 61px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+#shop-description {
+  margin-top: 50px;
+  width: 420px;
+  margin-left: 100px;
+  font-size: 18px;
+}
+
+#shop-hours {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 80px;
+  text-align: center;
+}
+
+#shop-hours img {
+  margin-left: 250px;
+}
+
+#shop-hours p {
+  margin-left: -270px;
+  font-size: 18px;
+}
+
+.smaller-buttons {
+  background: #F5F4EE;
+  border-radius: 4.12437px;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
   color: #5C241B;
+  margin-top: 80px;
+  border: none;
 }
 
-.our-story-details {
-  margin-left: 97px;
+.smaller-buttons:hover {
+  background-color: rgba(245, 244, 238, 0.90);
+  color: #581A0F;
+  border: solid 1px #581A0F;
 }
 
-.our-story-map {
-  margin-top: 260px;
-}
+
 
 
 /* FOOTER */
 
 footer {
-  position: absolute;
-width: 1440px;
-height: 120px;
-left: 97px;
-margin-top: 1890px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%; 
+  background: #ECEAE0;
+  height: 100px;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo-dark {
+  margin-left: 90px;
+}
+
+footer h3{
+	color: #5C241B; 
+  margin-bottom: 2px; 
+  font-weight: 400;
+  font-family: "Assistant";
+  font-size: 16px;
+}
+
+
+.right {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-items: left;
+  align-items: center;
+}
+
+
+footer form .inptfld {
+    font-family: "Assistant";
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 3px;
+    width: 220px;
+    margin-left: -30px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    border-color: #5C241B;
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+footer form .subscribebtn {
+  font-family: "Assistant";
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  color: #5C241B;
+  background: #F5F4EE;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+footer form .subscribebtn:hover {
+  background-color: rgba(245, 244, 238, 0.90);
+  color: #581A0F;
+  border: solid 1px #581A0F;
+}
+
+
+
+/* PRODUCTS PAGE */
+
+.product-listings {
+  display: grid;
+  grid-template-columns: 390px 390px 390px;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  margin-top: 50px;
+  grid-gap: 50px;
+}
+
+.product-card {
+  margin-bottom: 30px;
 
 }
+
+h3 {
+  font-family: "Arima Madurai";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 115.3%;
+  text-align: center;
+}
+
+.breadcrumbs {
+  margin-left: 90px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs  a:visited {
+  color: #87463C;
+}
+
+h5 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+h6 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.subheading {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.second-heading {
+  margin-top: 125px;
+}
+
+.price-and-cart {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.cart-dark {
+  text-align: right;
+}
+
+
+/* ABOUT PAGE */
+
+#store-description {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+}
+
+#storefront {
+  margin: 90px 40px 110px 90px;
+  float: left;
+}
+
+#description-text {
+  font-size: 40px;
+  margin-top: 130px;
+  font-weight: 400;
+  padding-right: 90px;
+}
+
+#description-text p{
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+#description-text h4 {
+  font-weight: 600;
+}
+
+
+#about-bottom-bar {
+  background-color:#5C241B;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 140px;
+}
+
+#about-bottom-bar p {
+  color: #FFFFFF;
+  font-size: 40px;
+  margin: 40px 90px 40px 90px;
+}
+
+#about-bottom-bar button {
+  background: #F5F4EE;
+  border-radius: 4.12437px;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  color: #5C241B;
+  border: none;
+  margin: 40px 0px 40px 460px;
+}
+
+#about-bottom-bar button:hover {
+  background-color: rgba(245, 244, 238, 0.90);
+  color: #581A0F;
+  border: solid 1px #F5F4EE;
+}
+
+
+/* FLAVORS PAGE */
+
+#flavor-selection {
+  text-align:center;
+  font-family: "Assistant";
+}
+
+#flavor-selection label {
+  font-size: 30px;
+  font-weight: 600;
+  color: #923A2D;
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* IMAGE SLIDESHOW */
+
+.flavors {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #DBD7C2;;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #ADAA9C;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* CONTACT US FORM */
+/* Referenced from codinglabweb.com/2021/04/contact-us-form-in-html-and-css-free.html */
+
+
+.contact-container{
+  max-width: 1150px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 90px 90px 110px 90px;
+  background-color:#ECEAE0;
+
+}
+
+.contact-container .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-container .content .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.content .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.content .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.content .left-side .details i{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+.contact-container .content .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.content .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #3e2093;
+}
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.right-side .message-box{
+  min-height: 110px;
+}
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+
+
+@media (max-width: 950px) {
+  .container{
+    width: 90%;
+    padding: 30px 40px 40px 35px ;
+  }
+  .container .content .right-side{
+   width: 75%;
+   margin-left: 55px;
+}
+}
+@media (max-width: 820px) {
+  .container{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .contact-container .content{
+    flex-direction: column-reverse;
+  }
+ .contact-container .content .left-side{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .contact-container .content .left-side::before{
+   display: none;
+ }
+ .contact-container .content .right-side{
+   width: 100%;
+   margin-left: 0;
+ }
+}
+

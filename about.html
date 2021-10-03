@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bun Bun Bake Shop</title>
+
+    <!-- linking Assistant font from google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <!-- linking Arima Madurai font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+     <!-- link CSS stylesheet -->   
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+   <!--BODY-->
+   <body>
+
+
+   <!-- NAV BAR -->
+   <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="images/logo.svg" alt="Bun Bun Bake Shop Logo">
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="products.html">Shop</a></li>
+      <li class="nav-item"><a href="flavors.html">Flavors</a></li>
+      <li class="nav-item"><a href="about.html">About</a></li>
+      <li class="nav-item"><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="google.com" class="cart">
+      <img src="images/cart.svg" alt="Shopping cart">
+    </a>
+  </nav>
+
+   <!-- BREADCRUMBS NAV -->
+   <p class ="breadcrumbs"> <a href ="index.html">home</a> > about</p>
+
+   <!-- HEADING -->
+    <h3>We’re Bun Bun Bake Shop</h3>
+    
+    <!-- SHOP DESCRIPTION -->
+    <div id = #store-description>
+      <img src="images/store.png" alt="Bun Bun Bake Shop storefront" id = "storefront">
+      <div id = "description-text">
+        <h4>Welcome!</h4>
+        <p id ="store-paragraph">We are a small bakery that specializes in cinnamon rolls,
+           from our famous original cinnamon rolls to a variety of artisan flavors. 
+           Our shop is located in Pittsburgh, PA and we ship fresh rolls anywhere in the 
+           Pittsburgh area. Visitors to our site should be able to buy cinnamon rolls by 
+           different flavors or create a custom box. </p>
+      </div>
+  
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div id = "about-bottom-bar">
+      <p>Deliciousness Gauranteed</p>
+      <form action="shop.html">
+        <button type="submit" >Shop Now</button>
+     </form>
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class ="left">
+        <a href="index.html" class="logo-dark">
+          <img src="images/logo-dark.svg" alt="Bun Bun Bake Shop Logo">
+        </a>
+      </div>
+      <div class="right">
+        <h3>Sign up for our newsletter:</h3>
+        <form action="/subscribe" method="post">
+            <input class="inptfld" name="email" placeholder="Email" type="text">
+       </form>
+
+       <form action="/subscribe" method="post">
+        <input class="subscribebtn" value="Subscribe Now!" type="submit">
+      </form>
+       
+    </div>
+    </footer>
+</body>
+</html>

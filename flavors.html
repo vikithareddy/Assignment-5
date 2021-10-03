@@ -21,7 +21,7 @@
   </head>
 
    <!--BODY-->
-   <body>
+   <body class = "flavors">
 
 
    <!-- NAV BAR -->
@@ -41,63 +41,60 @@
   </nav>
 
   <!-- BREADCRUMBS NAV -->
-  <p class ="breadcrumbs"> <a href ="index.html">home</a> > contact</p>
+  <p class ="breadcrumbs"> <a href ="index.html">home</a> > flavors</p>
+
 
   <!-- HEADING -->
-  <h3>Contact Us</h3>
-  <p class ="subheading">Any questions or remarks? Just write us a message!</p>
+  <h3>Flavor Guide</h3>
+  
+  <!-- FLAVOR SELECTION -->
+  <div id = "flavor-selection">
+    <label for="flavors">Choose a flavor:</label>
 
+    <select name="flavors" id="flavor">
+      <option value="original">Original</option>
+      <option value="original-gf">Original (Gluten-Free)</option>
+      <option value="walnut">Walnut</option>
+      <option value="pumpkin-spice">Pumpkin Spice</option>
+      <option value="caramel-pecan">Caramel Pecan</option>
+      <option value="blackberry">Blackberry</option>
+    </select>
 
-
-  <!-- CONTACT FORM -->
-
-  <div class="contact-container">
-    <div class="content">
-      <div class="left-side">
-        <div class="topic-text">Contact Information</div>
-        <p>Fill out the form and our team will get back to you within 24 hours</p>
-        <div class="address details">
-          <img src="images/location.svg" alt="line">
-          <div class="topic">Address</div>
-          <div class="text-one">5998 Center Ave, Pittsburgh</div>
-        </div>
-        <div class="phone details">
-          <img src="images/phone.svg" alt="line">
-          <div class="topic">Phone</div>
-          <div class="text-one">+1(909) 652-2028</div>
-        </div>
-        <div class="email details">
-          <img src="images/email.svg" alt="line">
-          <div class="topic">Email</div>
-          <div class="text-one">support@bunbun.com</div>
-        </div>
-      </div>
-      <div class="right-side">
-        <div class="input-box">
-          <input type="text" placeholder="Enter your first name">
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Enter your last name">
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Enter your email">
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Enter your phone number">
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Enter your message">
-        </div>
-        <div class="input-box message-box">
-          
-        </div>
-        <div class="button">
-          <button type="submit"  class = "smaller-buttons">Submit</button>
-        </div>
-      </form>
-    </div>
-    </div>
   </div>
+
+
+  <!-- IMAGE SLIDESHOW -->
+
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="flavor-images fade">
+    <img src="images/original.png" style="width:100%">
+  </div>
+
+  <div class="flavor-images fade">
+    <img src="images/original.png" style="width:100%">
+  </div>
+
+  <div class="flavor-images fade">
+    <img src="images/original.png" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+
 
 
 
