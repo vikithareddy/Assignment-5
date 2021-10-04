@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
      <!-- link CSS stylesheet -->   
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
   </head>
 
    <!--BODY-->
@@ -83,20 +83,28 @@
 
       <img src="images/flavor-guide-line.svg" alt="line">
 
+
+      <!-- Code referenced from https://stackoverflow.com/questions/15095933/pure-css-collapse-expand-div/38905720 -->
+
       <div class = "nutrition">
-        <img src="images/plus.svg" alt="line">
-        <p>Nutrition Information</p>
+        <a id="hide1" href="#hide1" class="hide">+ Nutrition Information</a>
+        <a id="show1" href="#show1" class="show">- Nutrition Information</a>
+        <div class="details">
+          Calories (per serving): <span>320 kcal</span>, Carb: <span>46g</span>, Protein: <span>6g</span>, Fat: <span>13g</span>
+        </div>
       </div>
 
       <img src="images/flavor-guide-line.svg" alt="line">
 
       <div class = "ingredients">
-        <img src="images/plus.svg" alt="line">
-        <p>Ingredient List</p>
+        <a id="hide2" href="#hide2" class="hide">+ Ingredient List</a>
+        <a id="show2" href="#show2" class="show">- Ingredient List</a>
+        <div class="details">
+          Flour, sugar, baking power, salt, butter, milk, ground cinnamon, eggs, cream cheese, vanilla extract, brown sugar, maple extract, powedered sugar, heavy cream
+        </div>
       </div>
 
-      <img src="images/flavor-guide-line.svg" alt="line">
-
+      <img src="images/flavor-guide-line.svg" alt="line"> 
     </div>
   </div>
 

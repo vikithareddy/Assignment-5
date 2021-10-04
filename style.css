@@ -612,6 +612,7 @@ select {
 }
 
 /* Code referenced from https://codepen.io/vkjgr/pen/VYMeXp */
+/* adding the arrow on the drop-down list */
 select.flavor {
   background-image:
     linear-gradient(45deg, transparent 50%, #5C241B 50%),
@@ -646,20 +647,37 @@ select.flavor {
 
 .flavor-description p {
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.nutrition {
-  display: grid;
-  grid-template-columns: 5% 95%;
+.flavor-description {
+  width: 90%;
 }
 
-.ingredients {
-  display: grid;
-  grid-template-columns: 5% 95%;
+.nutrition, .ingredients, .show, .hide {
+  color: #5C241B;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.hide, .show {
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 span {
   font-weight: 700;
+}
+
+/* Code referenced from https://stackoverflow.com/questions/15095933/pure-css-collapse-expand-div/38905720 */
+.details,
+.show,
+.hide:target {
+  display: none;
+}
+.hide:target + .show,
+.hide:target ~ .details {
+  display: block;
 }
 
 
