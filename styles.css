@@ -426,8 +426,8 @@ h6 {
 
 .popup-grid-right h6 {
   font-weight: bold;
-  font-size: 34.7688px;
-  line-height: 45px;
+  font-size: 22px;;
+  line-height: 25px;
   text-align: center;   
   color: #923A2D;
 }
@@ -437,11 +437,34 @@ h6 {
   grid-template-columns: 50% 50%;
 }
 
+.popup-grid img {
+  justify-self: center;
+  align-self: center;
+}
+
 .radio-buttons {
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
-  padding: 60px;
-  font-size: 20px;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.popup-grid-right button {
+  background: #F5F4EE;
+  border-radius: 4.12437px;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 20px 8px 20px;
+  color: #5C241B;
+  border: none;
+}
+
+.popup-grid-right button:hover {
+  background-color: rgba(245, 244, 238, 0.90);
+  color: #581A0F;
+  border: solid 1px #581A0F;
 }
 
 .radio__label {
@@ -449,7 +472,7 @@ h6 {
 }
 
 .radio {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .popup h2 {
@@ -550,7 +573,6 @@ h6 {
   color: #5C241B;
   border: none;
   margin: 40px 0px 40px 400px;
-
 }
 
 #about-bottom-bar button:hover {
