@@ -396,6 +396,95 @@ h6 {
   text-align: right;
 }
 
+/* Code referenced from https://codepen.io/sahil4test/pen/xERYvX */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #ECEAE0;
+  border-radius: 5px;
+  width: 55%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup-grid-right h6 {
+  font-weight: bold;
+  font-size: 34.7688px;
+  line-height: 45px;
+  text-align: center;   
+  color: #923A2D;
+}
+
+.popup-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.radio-buttons {
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  padding: 60px;
+  font-size: 20px;
+}
+
+.radio__label {
+  font-weight: 400;
+}
+
+.radio {
+  margin-bottom: 20px;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #87463C;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
 
 /* ABOUT PAGE */
 
@@ -531,6 +620,10 @@ select.flavor {
 .flavor-title-cart {
   display: grid;
   grid-template-columns: 50% 50%;
+}
+
+.flavor-description p {
+  margin-bottom: 20px;
 }
 
 .nutrition {
