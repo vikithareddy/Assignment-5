@@ -139,6 +139,10 @@ h2 {
   margin-left: 5px;
 }
 
+.pincode p {
+  font-weight: 700;
+}
+
 .pincode-button {
   background-color: transparent;
   border: none;
@@ -461,9 +465,10 @@ h6 {
 .popup-grid-right h6 {
   font-weight: bold;
   font-size: 22px;;
-  line-height: 25px;
-  text-align: center;   
+  line-height: 22px;
+  text-align: left;   
   color: #923A2D;
+  margin-left: 10px;
 }
 
 .popup-grid {
@@ -479,7 +484,7 @@ h6 {
 .radio-buttons {
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
-  padding: 20px;
+  padding: 18px;
   font-size: 16px;
 }
 
@@ -493,6 +498,7 @@ h6 {
   padding: 8px 20px 8px 20px;
   color: #5C241B;
   border: none;
+  float: right;
 }
 
 .popup-grid-right button:hover {
@@ -540,6 +546,91 @@ h6 {
   .popup{
     width: 70%;
   }
+}
+
+/* progress bar on popup */
+/* Code referenced from https://devrecipes.net/step-progres-bar-with-pure-css/ */
+
+.stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 8px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 15px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 15px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+}
+
+.stepper-item.active .step-counter{
+  font-weight: bold;
+  background-color: #A67068;
+  color: white;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #D7BFBC;
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #5C241B;
+  width: 100%;
+  top: 15px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+.step-name {
+  font-size: 10px;
 }
 
 
@@ -798,7 +889,7 @@ span {
 .submit-contact {
   background: #F5F4EE;
   border-radius: 4.12437px;
-  font-family: Assistant;
+  font-family: "Assistant";
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -890,4 +981,6 @@ span {
    margin-left: 0;
  }
 }
+
+
 
