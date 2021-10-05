@@ -120,6 +120,40 @@ h2 {
   color: #ECEAE0;
 }
 
+.pincode {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  margin-left: 90px;
+  max-width: 370px;
+  margin-bottom: 50px;
+}
+
+.pin {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  border-color: white;
+  border-radius: 0px;
+  background-color: transparent;
+  margin-left: 5px;
+}
+
+.pincode-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-left: 5px;
+  border-bottom: 1px solid white;
+}
+
+.pincode-button:hover {
+  color: #DAD2D2;
+}
+
+input[name=pin] {
+  color: white;
+}
 
 /* CTA Button */
 
@@ -652,6 +686,7 @@ select.flavor {
 
 .flavor-description {
   width: 90%;
+  max-width: 550px;
 }
 
 .nutrition, .ingredients, .show, .hide {
