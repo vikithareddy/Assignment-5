@@ -538,14 +538,6 @@ h6 {
   overflow: auto;
 }
 
-/* @media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 70%;
-  }
-} */
 
 /* progress bar on popup */
 /* Code referenced from https://devrecipes.net/step-progres-bar-with-pure-css/ */
@@ -563,9 +555,6 @@ h6 {
   align-items: center;
   flex: 1;
 
-  /* @media (max-width: 768px) {
-    font-size: 8px;
-  } */
 }
 
 .stepper-item::before {
@@ -685,6 +674,50 @@ h6 {
   float: right;
   margin-right: 20px;
   margin-top: 40px;
+}
+
+.custom-box-glazing {
+  display: grid;
+  grid-template-rows: 10% 40% 20% 10%;
+  justify-items: center;
+}
+
+.glazing {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin: 20px 90px 20px 90px;
+}
+
+.custom-box-glazing .custom-flavor-selection {
+  margin-right: 90px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.glazing-dropdown {
+  appearance: none;
+  outline: 0;
+  background: white;
+  color: black;
+  cursor: pointer;
+  border:2px solid #5C241B;
+  border-radius:4px;
+  padding: 8px;
+  width: 150px;
+  display: inline-block;
+}
+
+.custom-popup-bottom button {
+  background: #F5F4EE;
+  border-radius: 4.12437px;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 20px 8px 20px;
+  color: #5C241B;
+  border: none;
+  float: right;
 }
 
 
