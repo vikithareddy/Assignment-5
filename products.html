@@ -139,39 +139,39 @@
 
           <div class = "product-listings">
             <div class = "product-card">
-              <a href="flavors.html">
+              <a href="#popup2">
                 <img src="images/box-of-3.png" alt="Custom Box of 3 Cinnamon Rolls">
               </a>
               <h5>Box of 3 Cinnamon  Rolls</h5>
               <div class = "price-and-cart">
                 <h6>$9.00</h6>
-                <a href=" " class="cart-dark">
+                <a href="#popup2" class="cart-dark">
                   <img src="images/cart-dark.svg" alt="cart logo">
                 </a>
               </div>
             </div>
 
               <div class = "product-card">
-                <a href="flavors.html">
+                <a href="#popup2">
                   <img src="images/box-of-6.png" alt="Custom Box of 6 Cinnamon Rolls">
                 </a>
                 <h5>Box of 6 Cinnamon  Rolls</h5>
                 <div class = "price-and-cart">
                   <h6>$18.00</h6>
-                  <a href=" " class="cart-dark">
+                  <a href="#popup2" class="cart-dark">
                     <img src="images/cart-dark.svg" alt="cart logo">
                   </a>
                 </div>
               </div>
 
                 <div class = "product-card">
-                  <a href="flavors.html">
+                  <a href="#popup2">
                     <img src="images/box-of-12.png" alt="Custom Box of 12 Cinnamon Rolls">
                   </a>
                   <h5>Box of 12 Cinnamon  Rolls</h5>
                   <div class = "price-and-cart">
                     <h6>$38.00</h6>
-                    <a href=" " class="cart-dark">
+                    <a href="#popup3" class="cart-dark">
                       <img src="images/cart-dark.svg" alt="cart logo">
                     </a>
                   </div>
@@ -179,7 +179,8 @@
           </div>
 
 
-          <!-- CART POPUP -->
+
+          <!-- CART POPUP FOR SINGLE FLAVORS -->
           <!-- Code referenced from https://codepen.io/sahil4test/pen/xERYvX -->
           <div id="popup1" class="overlay">
             <div class="popup">
@@ -290,6 +291,165 @@
               </div>
 
               </div>
+            </div>
+          </div>
+
+
+          <!-- CART POPUP FOR CUSTOM BOX - FLAVOR SELECTION-->
+          <!-- Code referenced from https://codepen.io/sahil4test/pen/xERYvX -->
+          <div id="popup2" class="overlay">
+            <div class="popup custom-box">
+
+              <div class="stepper-wrapper">
+                <div class="stepper-item completed">
+                  <div class="step-counter">1</div>
+                  <div class="step-name">Quantity: Custom box of 3</div>
+                </div>
+                <div class="stepper-item active">
+                  <div class="step-counter">2</div>
+                  <div class="step-name">Flavors</div>
+                </div>
+                <div class="stepper-item">
+                  <div class="step-counter">3</div>
+                  <div class="step-name">Glazing</div>
+                </div>
+              </div>
+              <a class="close" href="">&times;</a>
+
+              <!-- Code referenced from https://devrecipes.net/step-progres-bar-with-pure-css/ -->
+                <div class = "custom-box-popup">
+                  <h6>Pick Your Flavors</h6>    
+                  <div class = "custom-box-images">
+                    <div class = "custom-flavor-selection"> ? </div>
+                    <div class = "custom-flavor-selection"> ? </div>
+                    <div class = "custom-flavor-selection"> ? </div>
+                  </div>
+                  <div class = "custom-box-selections">
+                    <div class = "flavor-selection">
+                      <h4>Original</h4>
+                      <form action="" method="post">
+                        <input class="subscribebtn" value="Add" type="submit">
+                      </form>
+                    </div>
+                    <div class = "flavor-selection">
+                      <h4>Original (GF)</h4>
+                      <form action="" method="post">
+                        <input class="subscribebtn" value="Add" type="submit">
+                      </form>
+                    </div>
+                    <div class = "flavor-selection">
+                      <h4>Walnut</h4>
+                      <form action="" method="post">
+                        <input class="subscribebtn" value="Add" type="submit">
+                      </form>
+                    </div>
+                    <div class = "flavor-selection">
+                      <h4>Pumpkin Spice</h4>
+                      <form action="" method="post">
+                        <input class="subscribebtn" value="Add" type="submit">
+                      </form>
+                    </div>
+                    <div class = "flavor-selection">
+                      <h4>Caramel Pecan</h4>
+                      <form action="" method="post">
+                        <input class="subscribebtn" value="Add" type="submit">
+                      </form>
+                    </div>
+                    <div class = "flavor-selection">
+                      <h4>Blackberry</h4>
+                      <form action="" method="post">
+                        <input class="subscribebtn" value="Add" type="submit">
+                      </form>
+                    </div>
+                  </div>
+
+                 
+                </div>
+
+                <div class = custom-popup-bottom>
+                  <h4>Total Cost: $9.00</h4>
+                  <a href="">
+                    <img src="images/arrow.svg" alt="Next arrow">
+                  </a>
+                </div>
+
+            </div>
+          </div>
+
+
+
+          <!-- CART POPUP FOR CUSTOM BOX - GLAZING SELECTION-->
+          <!-- TODO: COMPLETE WITH JS -->
+          <!-- Code referenced from https://codepen.io/sahil4test/pen/xERYvX -->
+          <div id="popup3" class="overlay">
+            <div class="popup custom-box">
+
+              <div class="stepper-wrapper">
+                <div class="stepper-item completed">
+                  <div class="step-counter">1</div>
+                  <div class="step-name">Quantity: Custom box of 3</div>
+                </div>
+                <div class="stepper-item active">
+                  <div class="step-counter">2</div>
+                  <div class="step-name">Flavors</div>
+                </div>
+                <div class="stepper-item">
+                  <div class="step-counter">3</div>
+                  <div class="step-name">Glazing</div>
+                </div>
+              </div>
+              <a class="close" href="">&times;</a>
+
+              <h6>Pick Your Glazing</h6>    
+
+              <div class = "custom-box-images">
+                <div class = "custom-flavor-selection"> ? </div>
+                <div class = "custom-flavor-selection"> ? </div>
+                <div class = "custom-flavor-selection"> ? </div>
+              </div>
+
+                <!-- GLAZING SELECTION -->
+              <div class = "flavor-selection">
+                <label >Glazing:</label>
+                <select name="flavors-dropdown" class="flavor">
+                  <option value="" disabled selected>Select a glazing</option>
+                  <option value="none">None</option>
+                  <option value="sugar-milk">Sugar-milk</option>
+                  <option value="vanilla-milk">Vanilla-milk</option>
+                  <option value="double-chocolate">Double Chocolate</option>
+
+                </select>
+              </div>
+
+              <div class = "flavor-selection">
+                <label >Glazing:</label>
+                <select name="flavors-dropdown" class="flavor">
+                  <option value="" disabled selected>Select a glazing</option>
+                  <option value="none">None</option>
+                  <option value="sugar-milk">Sugar-milk</option>
+                  <option value="vanilla-milk">Vanilla-milk</option>
+                  <option value="double-chocolate">Double Chocolate</option>
+                </select>
+              </div>
+
+              <div class = "flavor-selection">
+                <label >Glazing:</label>
+                <select name="flavors-dropdown" class="flavor">
+                  <option value="" disabled selected>Select a glazing</option>
+                  <option value="none">None</option>
+                  <option value="sugar-milk">Sugar-milk</option>
+                  <option value="vanilla-milk">Vanilla-milk</option>
+                  <option value="double-chocolate">Double Chocolate</option>
+                </select>
+              </div>
+
+                <div class = custom-popup-bottom>
+                  <h4>Total Cost: $9.00</h4>
+                  <form action="products.html">
+                    <button type="submit" >Add to Cart</button>
+                  </form>
+                </div>
+
             </div>
           </div>
 
