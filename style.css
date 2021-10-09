@@ -67,8 +67,7 @@ nav {
 /* The hero image */
 .hero-image {
   background-image: url("images/hero-image.png");
-
-  /* Position and center the image to scale nicely on all screens */
+  background-color: #5C241B;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
