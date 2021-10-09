@@ -12,10 +12,7 @@ body, html {
 }
 
 
-
 /* NAVIGATION */
-
-
 nav {
   background-color: #5C241B;
   display: flex;
@@ -53,8 +50,6 @@ nav {
   width: 50%;
 }
 
-
-
 .logo img {
   width: 100px;
   vertical-align: middle;
@@ -68,9 +63,7 @@ nav {
   margin-right:90px;
 }
 
-
 /* HERO SECTION */
-
 /* The hero image */
 .hero-image {
   background-image: url("images/hero-image.png");
@@ -81,7 +74,6 @@ nav {
   background-size: cover;
   width: 100%;
   height: 100vh;
-
 }
 
 /* Place text on the hero image */
@@ -159,7 +151,6 @@ input[name=pin] {
 }
 
 /* CTA Button */
-
 .cta {
   width: 220px;
   height: 60px;
@@ -187,7 +178,6 @@ input[name=pin] {
 
 
 /* OUR SHOP SECTION */
-
 #our-shop-title {
   margin-top: 130px;
 }
@@ -232,7 +222,6 @@ input[name=pin] {
 .map-bar p {
   margin-left: -270px;
 }
-
 
 .our-shop-details {
   background-color: #ECEAE0;
@@ -295,11 +284,7 @@ input[name=pin] {
   border: solid 1px #581A0F;
 }
 
-
-
-
 /* FOOTER */
-
 footer {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -366,10 +351,7 @@ footer form .subscribebtn:hover {
   border: solid 1px #581A0F;
 }
 
-
-
 /* PRODUCTS PAGE */
-
 .product-listings {
   display: grid;
   grid-template-columns: 390px 390px 390px;
@@ -541,7 +523,6 @@ h6 {
 
 /* progress bar on popup */
 /* Code referenced from https://devrecipes.net/step-progres-bar-with-pure-css/ */
-
 .stepper-wrapper {
   margin-top: auto;
   display: flex;
@@ -648,7 +629,6 @@ h6 {
   grid-template-columns: 33% 33% 33%;
 }
 
-
 .flavor-selection input {
   outline: none;
   border: none;
@@ -721,9 +701,7 @@ h6 {
   margin-top: 15px;
 }
 
-
 /* ABOUT PAGE */
-
 #store-description {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -755,7 +733,6 @@ h6 {
 #description-text h4 {
   font-weight: 700;
 }
-
 
 #about-bottom-bar {
   background-color:#5C241B;
@@ -794,9 +771,7 @@ h6 {
   border: solid 1px #F5F4EE;
 }
 
-
 /* FLAVORS PAGE */
-
 .flavor-selection {
   text-align:center;
   font-family: "Assistant";
@@ -808,7 +783,6 @@ h6 {
   font-weight: 600;
   color: #923A2D;
 }
-
 
 select {
   appearance: none;
@@ -897,8 +871,6 @@ span {
 
 /* CONTACT US FORM */
 /* Referenced from codinglabweb.com/2021/04/contact-us-form-in-html-and-css-free.html */
-
-
 .contact-container{
   max-width: 1150px;
   border-radius: 6px;
@@ -988,25 +960,28 @@ span {
   border: none;
 }
 
-
 .content .left-side .details .text-one,
 .content .left-side .details .text-two{
   font-size: 14px;
   color:rgba(92, 36, 27, 0.8);
 }
+
 .contact-container .content .right-side{
   width: 75%;
   margin-left: 75px;
 }
+
 .content .right-side .topic-text{
   font-size: 23px;
   font-weight: 600;
 }
+
 .right-side .input-box{
   height: 50px;
   width: 100%;
   margin: 12px 0 50px 0;
 }
+
 .right-side .input-box input,
 .right-side .input-box textarea{
   height: 100%;
@@ -1027,10 +1002,10 @@ span {
   resize: none;
 }
 
-
 .right-side .message-box{
   min-height: 110px;
 }
+
 .right-side .input-box textarea{
   padding-top: 6px;
 }
@@ -1045,12 +1020,12 @@ span {
    justify-content: center;
    flex-wrap: wrap;
  }
+
  .contact-container .content .left-side::before{
    display: none;
  }
+
  .contact-container .content .right-side{
    width: 100%;
    margin-left: 0;
  }
-
-
