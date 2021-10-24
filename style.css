@@ -700,7 +700,7 @@ h6 {
   margin-top: 15px;
 }
 
-/* ABOUT PAGE */
+/*  PAGE */
 #store-description {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -783,7 +783,7 @@ h6 {
   color: #923A2D;
 }
 
-select {
+#flavors {
   appearance: none;
   outline: 0;
   background: white;
@@ -866,6 +866,17 @@ span {
 .hide:target ~ .details {
   display: block;
 }
+
+
+/* .carousel {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.carousel-images {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+} */
 
 
 /* CONTACT US FORM */
@@ -1012,6 +1023,7 @@ span {
   .contact-container .content{
     flex-direction: column-reverse;
   }
+  
  .contact-container .content .left-side{
    width: 100%;
    flex-direction: row;
@@ -1028,3 +1040,96 @@ span {
    width: 100%;
    margin-left: 0;
  }
+
+
+ /* CART PAGE */
+
+ #cart {
+   max-width: 1200px;
+   align-self: center;
+   margin-top: 30px;
+ }
+
+ .cart-table {
+   width: 100%;
+ }
+
+ #cart-headings {
+   display: grid;
+   grid-template-columns: 40% 20% 20% 20%;
+   margin-top: 10px;
+   font-weight: 600;
+ }
+
+ #product-details {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   width: 500px;
+ }
+
+ #product-details img {
+   width: 230px;
+ }
+
+ #product-details-text {
+   display: grid;
+   grid-template-rows: 15% 15% 15%;
+ }
+
+#cart-flavor-title {
+  font-size: 26px;
+}
+
+#cart-flavor-options {
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+ #product-one {
+   display: grid;
+   grid-template-columns: 40% 20% 20% 20%;
+   margin-top: 50px;
+   margin-bottom: 100px;
+ }
+
+ .Action{
+  font-size: 14px;
+  font-weight: 600;
+  color: #923A2D;
+  cursor: pointer;
+  border-bottom: 1px solid #923A2D;
+  margin-top: 20px;
+  max-width: 90px;
+ }
+
+ #subtotal-checkout {
+   max-width: 350px;
+   display: grid;
+   grid-template-columns: 70% 30%;
+   grid-template-rows: auto auto;
+   float: right;
+ }
+
+ #subtotal-checkout button {
+  background: #5C241B;
+  border-radius: 4.12437px;
+  font-family: "Assistant";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  padding: 10px 20px 10px 20px;
+  color: #F5F4EE;
+  border: none;
+  width: 100%;
+  margin: 10px 0px 50px 50px;
+ }
+
+ #subtotal-checkout button:hover {
+  background-color: rgba(245, 244, 238, 0.90);
+  color: #581A0F;
+  border: solid 1px #581A0F;
+ }
+
+
+
