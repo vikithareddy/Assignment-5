@@ -92,6 +92,42 @@
                 <h5 class="Action">Save for Later</h5>
             </div>
         </div>
+      
+        <!-- DIV FOR PRODUCT TWO -->
+        <div id = "product-one" class = "product-card">
+            <!-- DIV CONTAINER FOR THE PRODUCT DETAILS -->
+            <div id = "product-details"> 
+                <img src="images/box-of-3.png" alt="Custom Box of Three Cinnamon Rolls">
+                <div id = "product-details-text">
+                    <h4 id = "cart-flavor-title">Assorted</h4>
+                    <h4 id = "cart-flavor-options">Glazing: Assorted</h4>
+                    <h4 id = "cart-flavor-options">Quantity: 1</h4>
+                </div>
+            </div>
+
+            <!-- DIV CONTAINER FOR QUANTITY -->
+            <div id = quantity>
+                <select name="quantity-dropdown" class="quantity-list" id = "quantity-list">
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                </select>
+                <h5 class="Action">Remove</h5>
+            </div>
+
+            <!-- DIV FOR PRICE -->
+            <div id = "price">
+                <h4>$9.00</h4>
+            </div>
+
+            <!-- DIV FOR TOTAL PRICE -->
+            <div id = "total">
+                <h4>$9.00</h4>
+                <h5 class="Action">Edit</h5>
+                <h5 class="Action">Save for Later</h5>
+            </div>
+        </div>
         <img src="images/cart-line.svg" alt="line divider">
 
         <!-- DIV CONTAINER FOR SUBTOTAL AND CHECKOUT BUTTON -->
@@ -101,7 +137,7 @@
                 <p>1 item</p>
             </div>
             <div id = "subtotal-number">
-                <h4 id = "cart-flavor-title">$3.00</h4>
+                <h4 id = "cart-flavor-title">$12.00</h4>
             </div>
             <form action="cart.html">
                 <button type="submit">Checkout</button>
@@ -131,6 +167,6 @@
     </footer>
 
     <!-- link JavaScript File -->   
-    <script defer src="main.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript" defer></script>
 </body>
 </html>

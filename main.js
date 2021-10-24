@@ -29,6 +29,7 @@ function flavorSelection(flavor) {
             ingredient_list.innerHTML = "Flour, sugar, baking power, salt, butter, milk, ground cinnamon, eggs, cream cheese, \
             vanilla extract, brown sugar, maple extract, powdered sugar, heavy cream";
             break;
+
         case "Original(GF)":
             // update description 
             flavor_description.innerHTML = "The original is our bestselling flavor made with made with a combination of warm dough, \
@@ -44,7 +45,7 @@ function flavorSelection(flavor) {
 
         case "Walnut":
             // update description 
-            flavor_description.innerHTML = " Soft and fluffy rolled bread with sweet cinnamon walnuts filling with cream cheese glaze \
+            flavor_description.innerHTML = "Soft and fluffy rolled bread with sweet cinnamon walnuts filling with cream cheese glaze \
             (or substitute with our other glazing options). These are perfect for Fall with the right \
             balance of sugary cinnamon and chunky walnuts.";
             // update image 
@@ -95,7 +96,6 @@ function flavorSelection(flavor) {
             break;
     }  
 }
-
 
 
 
@@ -170,22 +170,139 @@ function cartNumberPreview() {
     cart_data_count_int = cart_data_count.getAttribute("data-count");
     cart_data_count_int = parseInt(cart_data_count_int);
     cart_data_count_int += 1;
-    //cart_data_count.setAttribute("data-count", cart_data_count_int.toString())
-    localStorage.setItem('cart-preview-count', cart_data_count_int.toString());
-    //cart_data_count_int = sessionStorage.getItem('cart-preview-count');
+    localStorage.setItem('cart-preview-count', JSON.stringify(cart_data_count_int));
     console.log(sessionStorage.getItem('cart-preview-count'));
-    cart_data_count.setAttribute("data-count", sessionStorage.getItem('cart-preview-count'))
+    cart_data_count.setAttribute("data-count", localStorage.getItem('cart-preview-count'))
 }  
   
 
-function getBunInfo(bun) {
-    const bunInfo = {
-        flavor: document.getElementById("flavor-name").textContent,
-        glazing: "tbd",
-        quantity: "tbd",
-        cost: document.getElementById("popup-cost").textContent
+function productInfo(product) {
+    const flavors = document.getElementById("flavors"); // get the flavor name from the drop down list  
+    const flavor_heading = document.getElementById("flavor-heading"); // get the flavor heading 
+    const selected_flavor = flavors.value; // get specific flavor value 
+
+    const glazing_types = document.getElementById("glazing-types"); // get the glazing selection from the drop down list 
+    const selected_glazing = glazing_types.options[glazing_types.selectedIndex].value; // get specific glazing value
+
+    const quantity_options = document.getElementById("quantity-options"); // get the quantity selection from the drop down list 
+    const selected_quantity = quantity_options.options[quantity_options.selectedIndex].value; // get specific quantity value
+
+    const product_price = document.getElementById("flavor-page-price"); // get the price using id selector
+
+    // change the price displayed on the page according to the quantity selected
+    if (selected_quantity == 1) {
+        product_price.innerHTML = "$3.00";
+    } else if (selected_quantity == 3) {
+        product_price.innerHTML = "$9.00";
+    } else if (selected_quantity == 6) {
+        product_price.innerHTML = "$18.00";
+    } else if (selected_quantity == 12) {
+        product_price.innerHTML = "$36.00";
     };
-};
+
+    const product_price_text = document.getElementById("flavor-page-price").textContent;
+
+    //create a bun product object
+    const myBun = {
+        flavor: selected_flavor,
+        glazing: selected_glazing, 
+        quantity: selected_quantity,
+        price: product_price_text
+    };
+
+    // add to cart
+    console.log("SENDING TO CART FUNCTION:", myBun);
+
+    const add_to_cart_button = document.getElementById('add-to-cart');
+
+    // CALLED ONLY IF ADD TO CART BUTTON IS CLICKED
+    add_to_cart_button.addEventListener("click", () => {
+        addToCart(myBun);
+    });
+}
+
+const product_title = document.getElementById("cart-flavor-title");
+const cart_flavor_options = document.getElementById("cart-flavor-options");
+
+
+
+// ************************
+// changing local storage and html cart by adding
+function addToCart(myBun) {
+
+    console.log("ADDING TO CART:", myBun)
+
+    flavor = myBun.flavor; 
+    glazing = myBun.glazing; 
+    price = myBun.price; 
+    quantity = myBun.quantity; 
+    image = null;
+
+    addToCartFeedback()
+
+    // window.localStorage.setItem("flavor", JSON.stringify(flavor));
+    // const product_title = document.getElementById("cart-flavor-title");
+    // console.log("CART FLAVOR TITLE:", product_title);
+
+    // var get_flavor_name = window.localStorage.getItem("flavor");
+    // product_title.innerHTML = get_flavor_name;
+
+    // console.log(get_flavor_name);
+    
+    /*// local storage -- save state 
+    let products = [];
+    if(localStorage.getItem('products')){
+        products = JSON.parse(localStorage.getItem('products'));
+    }
+    products.push({'productId' : productId + 1, image : '<imageLink>'});
+    localStorage.setItem('products', JSON.stringify(products));*/
+
+    // injecting into html -- html
+    // taking object, extracting info and injecting to html 
+
+
+    /* INJECT HTML into Shopping cart html */
+    // const row = document.
+    // row.innerHTML = "";
+}
+
+
+function addToCartFeedback() {
+    const feedback = document.createElement('div');
+    feedback.classList.add("add-to-cart-feedback");
+    feedback.innerHTML = "New item added to cart!";
+    document.body.appendChild(feedback);
+}
+
+
+/*
+function removeProduct(productId){
+
+    // Your logic for your app.
+
+    // strore products in local storage
+
+    let storageProducts = JSON.parse(localStorage.getItem('products'));
+    let products = storageProducts.filter(product => product.productId !== productId );
+    localStorage.setItem('products', JSON.stringify(products));
+}
+
+// changing local storage and html cart by deleting one
+function removeFromCart() {
+
+}
+
+// clearing out all local storage and html for cart 
+function removeAllFromCart() {
+
+    // removeFromCart(); 
+}
+*/
+
+
+
+
+
 
 
 // const bunInfo = {
@@ -194,6 +311,7 @@ function getBunInfo(bun) {
 //     quantity: "tbd",
 //     cost: document.getElementById("popup-cost").textContent
 // };
+
 
 
 // const products = document.querySelector('.popup-grid');
@@ -242,77 +360,4 @@ function getBunInfo(bun) {
 
 
 
-/*
-// ************************
-loadEventListeners();
-
-// listening for an event - adding or deleting from cart
-function loadEventListeners() {
-    // Event -- when new bun is added to cart
-    const buns = document.querySelector("#popup1");
-    console.log(buns); 
-    buns.addEventListener('click', buyBun);
-    // handler to event
-    function buyBun(b) {
-        if (b.target.classList.contains('add-to-cart')) {
-            console.log(b);
-            getBunInfo(b); 
-        }
-    }
-}
-*/
-
-
-// getting info for item needed for HTML
-// function getBunInfo() {
-    // gets info
-    /*const bunInfo = {
-        flavor: , 
-        glazing: , 
-        quantity: , 
-        price: , 
-    }*/
-    // addToCart(bunInfo); 
-// }
-
-/*
-function addProduct(){
-    let products = [];
-    if(localStorage.getItem('products')){
-        products = JSON.parse(localStorage.getItem('products'));
-    }
-    products.push({'productId' : productId + 1, image : '<imageLink>'});
-    localStorage.setItem('products', JSON.stringify(products));
-}
-*/
-
-// changing lcoal storage and html cart by adding
-// function addToCart(bunInfo) {
-    // local storage
-
-    // injecting into html
-// }
-
-/*
-function removeProduct(productId){
-
-    // Your logic for your app.
-
-    // strore products in local storage
-
-    let storageProducts = JSON.parse(localStorage.getItem('products'));
-    let products = storageProducts.filter(product => product.productId !== productId );
-    localStorage.setItem('products', JSON.stringify(products));
-}
-*/
-// changing local storage and html cart by deleting one
-// function removeFromCart() {
-
-// }
-
-// clearing out all local storage and html for cart 
-// function removeAllFromCart() {
-
-    // removeFromCart(); 
-// }
 

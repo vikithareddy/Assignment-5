@@ -811,6 +811,20 @@ h6 {
   margin-left: 10px;
 }
 
+#glazing-types, #quantity-options {
+  appearance: none;
+  outline: 0;
+  background: white;
+  color: black;
+  cursor: pointer;
+  border:2px solid #5C241B;
+  border-radius:4px;
+  padding: 5px;
+  width: 130px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
 /* Code referenced from https://codepen.io/vkjgr/pen/VYMeXp */
 /* adding the arrow on the drop-down list */
 select.flavor {
@@ -868,6 +882,27 @@ select.flavor {
 
 span {
   font-weight: 700;
+}
+
+#add-to-cart {
+  background: #5C241B;
+  border-radius: 4.12437px;
+  font-family: "Assistant";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 5px 10px 5px 10px;
+  color: #F5F4EE;
+  border: none;
+  width: 30%;
+  margin: 10px 0px 50px 0px;
+}
+
+#add-to-cart:hover {
+  background-color: rgba(245, 244, 238, 0.90);
+  color: #581A0F;
+  border: solid 1px #581A0F;
 }
 
 /* Code referenced from https://stackoverflow.com/questions/15095933/pure-css-collapse-expand-div/38905720 */
@@ -949,8 +984,6 @@ span {
 .nav .next.hide {
   display: none;
 }
-
-Resources
 
 
 /* CONTACT US FORM */
@@ -1117,7 +1150,6 @@ Resources
 
 
  /* CART PAGE */
-
  #cart {
    max-width: 1200px;
    align-self: center;
@@ -1163,7 +1195,7 @@ Resources
    display: grid;
    grid-template-columns: 40% 20% 20% 20%;
    margin-top: 50px;
-   margin-bottom: 100px;
+   margin-bottom: 50px;
  }
 
  .Action{
@@ -1212,12 +1244,13 @@ Resources
   position:absolute;
   right:6%;
   content: attr(data-count);
-  font-size:80%;
+  font-size:90%;
+  font-weight: 700;
   padding:.1em;
   border-radius:100%;
   line-height:1em;
-  color: white;
-  background:#923A2D;
+  color: #923A2D;
+  background:white;
   text-align:center;
   min-width: 1em;
 }
