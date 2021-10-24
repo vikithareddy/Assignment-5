@@ -442,10 +442,20 @@ h6 {
   transition: all 5s ease-in-out;
 }
 
+.popup-grid-right h3 {
+  font-weight: bold;
+  font-size: 24px;;
+  line-height: 16px;
+  text-align: left;   
+  color: #581A0F;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
 .popup-grid-right h6 {
   font-weight: bold;
-  font-size: 22px;;
-  line-height: 22px;
+  font-size: 18px;;
+  line-height: 16px;
   text-align: left;   
   color: #923A2D;
   margin-left: 10px;
@@ -463,15 +473,15 @@ h6 {
 
 .radio-buttons {
   display: grid;
-  grid-template-rows: 25% 25% 25% 25%;
-  padding: 18px;
+  grid-template-rows: 20% 20% 20% 20%;
+  padding: 8px;
   font-size: 16px;
 }
 
 .popup-grid-right button {
   background: #F5F4EE;
   border-radius: 4.12437px;
-  font-family: Assistant;
+  font-family: "Assistant";
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -517,6 +527,10 @@ h6 {
 .popup .content {
   max-height: 30%;
   overflow: auto;
+}
+
+.popup h4 {
+  display:inline-block;
 }
 
 
@@ -867,16 +881,76 @@ span {
   display: block;
 }
 
-
-/* .carousel {
-  display: grid;
-  grid-template-rows: auto;
+/* CAROUSEL STYLING */
+/* Code referenced from https://dev.to/rahulra08598872/multiple-item-carousel-39ae */
+.carousel-container {
+  width: 80%;
+  margin: 60px 90px 90px 90px;
+  position: relative;
 }
 
-.carousel-images {
-  display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-} */
+#carousel-heading {
+  font-size: 38px;
+}
+
+.inner-carousel {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.track {
+  display: inline-flex;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+.card-container {
+  width: 480px;
+  flex-shrink: 0;
+  padding-right: 10px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-position: center bottom;
+  background-size: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.nav button {
+  position: absolute;
+  top: 40%;
+  transform: translatey(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #923A2D;
+  cursor: pointer;
+}
+
+.fa-arrow-right, .fa-arrow-left {
+  color:#923A2D;
+}
+
+.nav .prev {
+  left: -30px;
+  display: none;
+}
+
+.nav .prev.show {
+  display: block;
+}
+.nav .next {
+  right: -30px;
+}
+.nav .next.hide {
+  display: none;
+}
+
+Resources
 
 
 /* CONTACT US FORM */
@@ -1132,4 +1206,18 @@ span {
  }
 
 
-
+/* add a item number preview to the cart icon */
+/* referenced from https://codepen.io/jmalatia/pen/MJaVxL */
+.cart[data-count]:after {
+  position:absolute;
+  right:6%;
+  content: attr(data-count);
+  font-size:80%;
+  padding:.1em;
+  border-radius:100%;
+  line-height:1em;
+  color: white;
+  background:#923A2D;
+  text-align:center;
+  min-width: 1em;
+}
