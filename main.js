@@ -153,12 +153,8 @@ function onRadioClick(radioButton) {
         document.getElementById("popup-cost").innerHTML = "$36.00";
     }
 };
-
-
-//if add to cart button is clicked
-//grab the item quantity from the cart page 
-//update the data count attribute of the cart 
-//add to localstorage to keep it persistent
+ 
+// update the data count attribute of the cart and display it as feedback when Add to Cart button is clicked
 function cartNumberPreview() {
     const cart_data_count = document.getElementById("main-cart");
     cart_data_count_int = cart_data_count.getAttribute("data-count");
