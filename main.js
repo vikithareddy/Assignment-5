@@ -1,8 +1,3 @@
-//
-//
-// Flavors Tab -- flavors.html 
-//
-//
 // change the flavor page content according to the flavor selected in the drop down menu 
 function flavorSelection(flavor) {
     /* FLAVOR ELEMENTS */
@@ -98,7 +93,6 @@ function flavorSelection(flavor) {
 }
 
 
-
 // Shop Tab, Popup -- products.html 
 /* when the cart icon of each product is clicked, change the flavor name and the image on the popup*/
 function popupContent(cart_selected) {
@@ -175,7 +169,7 @@ function cartNumberPreview() {
     cart_data_count.setAttribute("data-count", localStorage.getItem('cart-preview-count'))
 }  
   
-
+//get product info from the Flavors page, change price according to the quantity selected and create a myBun object
 function productInfo(product) {
     const flavors = document.getElementById("flavors"); // get the flavor name from the drop down list  
     const flavor_heading = document.getElementById("flavor-heading"); // get the flavor heading 
@@ -221,13 +215,8 @@ function productInfo(product) {
     });
 }
 
-const product_title = document.getElementById("cart-flavor-title");
-const cart_flavor_options = document.getElementById("cart-flavor-options");
-
-
-
-// ************************
-// changing local storage and html cart by adding
+// add myBun object to the cart dynamically
+//FIXME: Incomplete function
 function addToCart(myBun) {
 
     console.log("ADDING TO CART:", myBun)
@@ -266,7 +255,8 @@ function addToCart(myBun) {
     // row.innerHTML = "";
 }
 
-
+// show a feedback message when Add to Cart button clicked
+//FIXME: Incomplete function
 function addToCartFeedback() {
     const feedback = document.createElement('div');
     feedback.classList.add("add-to-cart-feedback");
@@ -274,54 +264,6 @@ function addToCartFeedback() {
     document.body.appendChild(feedback);
 }
 
-
-/*
-function removeProduct(productId){
-
-    // Your logic for your app.
-
-    // strore products in local storage
-
-    let storageProducts = JSON.parse(localStorage.getItem('products'));
-    let products = storageProducts.filter(product => product.productId !== productId );
-    localStorage.setItem('products', JSON.stringify(products));
-}
-
-// changing local storage and html cart by deleting one
-function removeFromCart() {
-
-}
-
-// clearing out all local storage and html for cart 
-function removeAllFromCart() {
-
-    // removeFromCart(); 
-}
-*/
-
-
-
-
-
-
-
-// const bunInfo = {
-//     flavor: document.getElementById("flavor-name").innerHTML,
-//     glazing: "tbd",
-//     quantity: "tbd",
-//     cost: document.getElementById("popup-cost").textContent
-// };
-
-
-
-// const products = document.querySelector('.popup-grid');
-// console.log(products);
-
-// const shopping_cart_content = document.querySelector('#product-details-text');
-// console.log(shopping_cart_content);
-
-// const trial = document.querySelector('#product-one');
-// console.log(trial);
 
 
 
